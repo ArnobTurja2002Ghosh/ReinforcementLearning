@@ -15,7 +15,7 @@ I used v1.
 
 - One of the main challenges in RL is the tradeoff between exploitation and exploration.
 
-  They are the two birds (দুই পাখি) of Rabindranath Tagore. The poem starts something like this:
+  They are the two birds (দুই পাখি) of Rabindranath Tagore. The poem starts like this:
 ~~~
   খাঁচার পাখি ছিল     সোনার খাঁচাটিতে
 
