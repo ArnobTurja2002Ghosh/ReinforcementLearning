@@ -13,4 +13,8 @@ I used v1.
 
 ### Exploitation vs Exploration
 
-- One of the main challenges in RL is the tradeoff between <code style="color : red">exploitation</code>  and <code style="color : red">exploration</code>
+- One of the main challenges in RL is the tradeoff between exploitation and exploration.
+
+  They are the two birds (দুই পাখি) of Rabindranath Tagore.
+  
+  
