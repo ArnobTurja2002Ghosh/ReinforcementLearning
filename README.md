@@ -66,3 +66,31 @@ Yeah, I know, you can see that there indeed is a Guru in Q-learning but you cann
 ~~~
 What Kabir says is hard to understand: 'The bird is beyond seeking, yet it is most clearly visible. The Formless is in the midst of all forms. I sing the glory of forms.'
 ~~~
+## SARSA
+
+### Exploitation vs Exploration
+In Q-learning we saw how absence of a caged bird is not a problem. With epsilon=1, the disciple will randomly do actions and the guru will happily make an optimal policy. 
+
+But in SARSA, don't you dare underestimate the importance of the caged bird. SARSA knows its next action in its next state, so it is not as optimistic as Q-learning about its future. Now, of course I am not the first person to compare Q-learning and SARSA. Let's see how writers like Barto and Sutton tell us the difference between the two learning methods.
+
+~~~
+Example 6.6: Cliff Walking: This gridworld example compares Sarsa and Q-learning,
+highlighting the di↵erence between on-policy (Sarsa) and off-policy (Q-learning) methods.
+~~~
+I also have a map that represents a cliff. What's up with cliffs?
+
+~~~
+This is a standard, undiscounted, episodic task, with start
+and goal states, and the usual actions causing movement up, down,
+right, and left. Reward is -1 on all transitions except those into the region marked "The Cliff."
+~~~
+Yeap, we can simulate that. There can be a cliff region in our map, and stepping into the cliff incurs a reward of -100. 
+
+~~~
+After an initial transient, Q-learning learns values for the optimal policy, that which travels right along the edge of the cliff.
+~~~
+Yeah, we could guess that given that it is always optimistic about its future actions. But what did the writers say about SARSA? They say, "SARSA on the other hand takes the action selection into account and learns the longer but safer path..." This is where I was curious. How safe? Will it try to take the safest possible path? Will it take the longest path that is farthest from the cliff? Answer: No. My only observation about SARSA is that it avoids travelling along the edge. It can take any path - literally any path - that is not the edge of the cliff. In fact, the path by SARSA tends to be close to the path along the edge - meaning SARSA is not coward - it just tries to be safe. 
+
+Remember I said that the caged bird/ exploitation/ greedy action is important here?
+
+As I said, SARSA is not always optimistic about future because it knows its future state and future action. If SARSA sees that it has been taking random actions most of the time - and you do not reach a goal by random actions (maybe sometimes you randomly reach a goal by random series of actions - but that is a random instance) - its policy will be to jump off the cliff! Seriously! Talk about suicide from frustration from failure! In my observation, the maximum exploration you can have in SARSA is epsilon=0.7.
