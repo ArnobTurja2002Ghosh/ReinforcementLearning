@@ -81,7 +81,7 @@ I also have a map that represents a cliff. What's up with cliffs?
 
 ~~~
 This is a standard, undiscounted, episodic task, with start
-and goal states, and the usual actions causing movement up, down,
+and goal states, and the usual actions causing movement up, down,
 right, and left. Reward is -1 on all transitions except those into the region marked "The Cliff."
 ~~~
 Yeap, we can simulate that. There can be a cliff region in our map, and stepping into the cliff incurs a reward of -100. 
