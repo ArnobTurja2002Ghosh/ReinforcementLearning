@@ -42,7 +42,7 @@ Restless exploration makes you learn the optimal policy by trying all the good a
 Therefore, exploration and exploitation is comparable to বনের পাখি forest bird and খাঁচার পাখি caged bird respectively:
 "One is a forest bird and the other is a caged bird."
 
-By now, due to connotations of words like "feminine", "caged" etc you probably got a negative impression towards exploiation (woah, I just realized that "exploitation" itself is also a negative word). Don't worry, I am not going to accuse you of misogyny because indeed, an optimal policy can form without any exploitation. You may be thinking that how is exploitation contributing to our Q-learning then. What will happen if epsilon=0 - there is no খাঁচার পাখি - no exploitation? Will there be just one bird? This reminds me of a poem by Kabir:
+By now, due to connotations of words like "feminine", "caged" etc you probably got a negative impression towards exploiation (woah, I just realized that "exploitation" itself is also a negative word). Don't worry, I am not going to accuse you of misogyny because indeed, an optimal policy can form without any exploitation. You may be thinking that how is exploitation contributing to our Q-learning then. What will happen if epsilon=1 - there is no খাঁচার পাখি - no exploitation? Will there be just one bird? This reminds me of a poem by Kabir:
 ~~~
 THERE IS A strange tree, which stands without roots and bears fruits without blossoming;
 
