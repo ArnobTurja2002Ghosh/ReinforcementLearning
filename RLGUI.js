@@ -63,6 +63,11 @@ class RLGUI extends GUI {
             this.RL = new RL_EV_MC(this.env, this.getConfig());
             this.bannerDiv.innerHTML = "<b>GridWorld Every Visit Monte Carlo - <a href='http://www.cs.mun.ca/~dchurchill/'>David Churchill</a>";
         }
+        else if(learn == "FV_MC"){
+            this.RL = new RL_FV_MC(this.env, this.getConfig());
+            this.bannerDiv.innerHTML = "<b>GridWorld First Visit Monte Carlo - <a href='http://www.cs.mun.ca/~dchurchill/'>David Churchill</a>";
+        }
+        this.totalIterations=0; this.totalgoal=1; this.resetChart();
     }
     
     draw() {
@@ -268,6 +273,9 @@ class RLGUI extends GUI {
                 if(this.gui.RL.type == "EV_MC"){
                     this.gui.RL.record = [[],[],[]];
                 }
+                if(this.gui.RL.type == "FV_MC"){
+                    this.gui.RL.record = [[],[],[]];
+                }
             } else if (evt.which == 2) {
                 this.gui.selectX = x;
                 this.gui.selectY = y;
@@ -335,7 +343,7 @@ class RLGUI extends GUI {
 
         this.addText(this.controlDiv, 'labellearn', 0, top + s*skip, 250, 25, "Learning Type:");
         this.addSelectBox(this.controlDiv, 'selectlearn', c2left, top + s++*skip, 250, 25, function() { this.gui.setMap(); }, 
-            [['Q', 'Q-Learning'], ['SARSA', 'SARSA'], ['EV_MC', 'Every-Visit Monte Carlo']]);
+            [['Q', 'Q-Learning'], ['SARSA', 'SARSA'], ['EV_MC', 'Every-Visit Monte Carlo'], ['FV_MC', 'First-Visit Monte Carlo']]);
         // Mouse Mode
         this.addText(this.controlDiv, 'labelmouse', 0, top + s*skip, 250, 25, "Mouse Mode:");
         this.addSelectBox(this.controlDiv, 'selectmouse', c2left, top + s++*skip, 250, 25, function() { this.gui.setMouse(); }, 
