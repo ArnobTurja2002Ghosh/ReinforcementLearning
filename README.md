@@ -75,7 +75,7 @@ But in SARSA, don't you dare underestimate the importance of the caged bird. SAR
 
 ~~~
 Example 6.6: Cliff Walking: This gridworld example compares Sarsa and Q-learning,
-highlighting the di↵erence between on-policy (Sarsa) and off-policy (Q-learning) methods.
+highlighting the difference between on-policy (Sarsa) and off-policy (Q-learning) methods.
 ~~~
 I also have a map that represents a cliff. What's up with cliffs?
 
